@@ -1,0 +1,19 @@
+{
+  "name": "dubbo-provider-nodejs",
+  "version": "1.0.0",
+  "description": "dubbo nodejs provider ",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {},
+  "keywords": [
+    "dubbo",
+    "nodejs"
+  ],
+  "author": "gxcsoccer",
+  "license": "MIT",
+  "dependencies": {
+    "address": "^1.0.3",
+    "dubbo-remoting": "^2.0.0",
+    "sofa-rpc-node": "^1.2.1"
+  }
+}
