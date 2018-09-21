@@ -14,7 +14,7 @@ const server = new RpcServer({
 });
 
 server.addService({
-  interfaceName: 'com.alibaba.boot.dubbo.demo.consumer.DemoService',
+  interfaceName: 'com.alibaba.boot.dubbo.demo.DemoService',
   version: '1.0.1',
 }, {
   async sayHello(name) {
