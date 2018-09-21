@@ -88,7 +88,9 @@ prometheus-84bd4b9796-l4dxm                 0/1       ContainerCreating   0     
 ## 三、部署 DUBBO 示例
 
 网络拓扑图
-![undefined](https://cdn-pri.nlark.com/yuque/0/2018/png/88025/1536739312475-d6c3f91e-d7b1-459d-b0e6-4161fa21b068.png) 
+![image](https://user-images.githubusercontent.com/1207064/45411063-dbe6df80-b6a5-11e8-9b31-e2183f04bf6d.png)
+
+
 
 - ### 下载示例仓库
 
