@@ -1,0 +1,16 @@
+{
+  "name": "bolt-demo",
+  "version": "1.0.0",
+  "description": "rpc demo",
+  "private": "true",
+  "scripts": {},
+  "keywords": [
+    "bolt",
+    "nodejs"
+  ],
+  "author": "gxcsoccer",
+  "license": "MIT",
+  "dependencies": {
+    "sofa-rpc-node": "^1.2.1"
+  }
+}
