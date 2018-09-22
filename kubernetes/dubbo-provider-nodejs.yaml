@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   labels:
     app: e2e-dubbo-provider
-    ver: v3
-  name: e2e-dubbo-provider-v3
+    ver: v2
+  name: e2e-dubbo-provider-v2
   namespace: e2e-dubbo
 spec:
   replicas: 1
@@ -15,8 +15,8 @@ spec:
     metadata:
       labels:
         app: e2e-dubbo-provider
-        ver: v3
-      name: e2e-dubbo-provider-v3
+        ver: v2
+      name: e2e-dubbo-provider-v2
       namespace: e2e-dubbo
     spec:
       affinity:

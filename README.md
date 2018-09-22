@@ -112,7 +112,7 @@ $ kubectl apply -f kubernetes/e2e-dubbo-ns.yaml
 ```bash
 $ kubectl apply -f kubernetes/dubbo-consumer.yaml
 $ kubectl apply -f kubernetes/dubbo-provider-v1.yaml
-$ kubectl apply -f kubernetes/dubbo-provider-v2.yaml
+$ kubectl apply -f kubernetes/dubbo-provider-nodejs.yaml
 ```
 
 创建 Services
@@ -151,13 +151,10 @@ Starting to serve on 127.0.0.1:8001
 
 - ### 通过代理访问 Consumer 的 HTTP 服务
 
-请求三次，看到了三个版本（v1, v2 是 java，v3 是 nodejs）
+请求两次，看到了两个版本（v1, v2 是 nodejs）
 ```bash
 $ curl http://127.0.0.1:8001/api/v1/namespaces/e2e-dubbo/services/e2e-dubbo-consumer:8080/proxy/sayHello?name=dubbo-mosn
 Hello, dubbo-mosn (from Spring Boot dubbo e2e test) [e2e-dubbo-provider-v1-6966bcb497-vxz6t/172.16.1.150]%
-
-$ curl http://127.0.0.1:8001/api/v1/namespaces/e2e-dubbo/services/e2e-dubbo-consumer:8080/proxy/sayHello\?name\=dubbo-mosn
-Hello, dubbo-mosn (from Spring Boot dubbo e2e test) [e2e-dubbo-provider-v2-795dfb68dc-r5dbc/172.16.1.151]%
 
 $ curl http://127.0.0.1:8001/api/v1/namespaces/e2e-dubbo/services/e2e-dubbo-consumer:8080/proxy/sayHello?name=dubbo-mosn
 Hello, dubbo-mosn (from Nodejs dubbo e2e test) [e2e-dubbo-provider-v3-9f8d6b9b6-7gtv4/172.16.1.152]%
@@ -187,9 +184,6 @@ spec:
   - name: v2
     labels:
       ver: v2
-  - name: v3
-    labels:
-      ver: v3
 ```
 
 ```bash

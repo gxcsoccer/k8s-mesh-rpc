@@ -12,6 +12,3 @@ spec:
   - name: v2
     labels:
       ver: v2
-  - name: v3
-    labels:
-      ver: v3
